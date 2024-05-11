@@ -142,7 +142,7 @@ export default function Home() {
           <img
             src="assets/17.png"
             alt=""
-            className="picture absolute bottom-20 right-0 md:bottom-32 lg:bottom-0 md:right-20 lg:right-60 w-72"
+            className="picture absolute bottom-[50%] md:bottom-20 max-sm:transform max-sm:translate-y-[50%] right-0  lg:bottom-0 md:right-20 lg:right-60 w-72"
           />
           <div className="absolute bottom-20 lg:bottom-0   w-full p-8 pb-0 md:pb-12 md:p-12">
             <h3 className="text-4xl mb-7 font-bold">Fortune Fox</h3>
