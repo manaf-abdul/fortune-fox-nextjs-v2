@@ -142,7 +142,7 @@ export default function Home() {
           <img
             src="assets/17.png"
             alt=""
-            className="picture absolute bottom-[50%] md:bottom-20 max-sm:transform max-sm:translate-y-[50%] right-0  lg:bottom-0 md:right-20 lg:right-60 w-72"
+            className="picture absolute bottom-20  max-sm:transform max-sm:translate-x-[50%] right-[50%]  lg:bottom-0 md:right-20 lg:right-60 w-72"
           />
           <div className="absolute bottom-20 lg:bottom-0   w-full p-8 pb-0 md:pb-12 md:p-12">
             <h3 className="text-4xl mb-7 font-bold">Fortune Fox</h3>
@@ -151,7 +151,7 @@ export default function Home() {
               <a
                 href="https://jup.ag/swap/SOL-BOJACK_EUeJuDgVxx83953XeBHS3fzY7tneitb19dmdPrTMHGqd"
                 target="_blank"
-                className="flex hover:bg-white/80 hover:text-black rounded-3xl p-3 px-6 text-2xl bg-white text-black w-[300px] gap-3 max-w-fit"
+                className="flex hover:bg-white/80 hover:text-black rounded-3xl p-3 px-6 text-2xl bg-white text-black min-w-[260px] gap-3 max-w-fit"
               >
                 Buy on Jupiter
                 <img src="assets/explore.svg" alt="" />
@@ -159,7 +159,7 @@ export default function Home() {
               <a
                 href="https://twitter.com/BojackSolana"
                 target="_blank"
-                className="hover:bg-white/80 hover:text-black rounded-3xl p-3 px-6 text-2xl bg-white text-black w-[300px] max-w-fit"
+                className="hover:bg-white/80 hover:text-black rounded-3xl p-3 px-6 text-2xl bg-white text-black min-w-[260px] max-w-fit"
               >
                 Follow on Twitter
               </a>
