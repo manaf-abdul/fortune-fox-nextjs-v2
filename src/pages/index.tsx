@@ -3,20 +3,19 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [bgAnim, setBgAnim] = useState(
-    "linear-gradient(126deg,rgb(0, 0, 0),rgb(232, 36, 214),rgb(14, 4, 142))"
+    "linear-gradient(126deg,rgb(0, 0, 0),rgb(71, 6, 65),rgb(10, 7, 41))"
   );
 
-  function bgChangingAnimation() {
-    let deg = 0;
-    setInterval(() => {
-      deg++;
-    }, 100);
-    let bgColor = `linear-gradient(${deg}deg,rgb(0, 0, 0),rgb(232, 36, 214),rgb(14, 4, 142))`;
-    setBgAnim(bgColor);
-  }
   useEffect(() => {
-    bgChangingAnimation();
-  });
+    let deg = 0;
+    const interval = setInterval(() => {
+      deg++;
+      let bgColor = `linear-gradient(${deg}deg,rgb(0, 0, 0),rgb(71, 6, 65),rgb(10, 7, 41))`;
+      setBgAnim(bgColor);
+    }, 30);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
       className="grandstander"
