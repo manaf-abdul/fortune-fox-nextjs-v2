@@ -28,8 +28,13 @@ export default function Home() {
 
   useEffect(() => {
     let deg = 0;
+
     const interval = setInterval(() => {
       deg++;
+      if (deg == 360) {
+        deg = 0;
+        deg++;
+      }
       let bgColor = `linear-gradient(${deg}deg,rgb(0, 0, 0),rgb(71, 6, 65),rgb(10, 7, 41))`;
       setBgAnim(bgColor);
     }, 30);
@@ -142,9 +147,9 @@ export default function Home() {
           <img
             src="assets/17.png"
             alt=""
-            className="picture absolute bottom-20  max-sm:transform max-sm:translate-x-[50%] right-[50%]  lg:bottom-0 md:right-20 lg:right-60 w-72"
+            className="picture absolute bottom-44 md:bottom-12  max-sm:transform max-sm:translate-x-[50%] right-[50%]  lg:bottom-0 md:right-20 lg:right-60 w-72"
           />
-          <div className="absolute bottom-20 lg:bottom-0   w-full p-8 pb-0 md:pb-12 md:p-12">
+          <div className="absolute bottom-20 lg:bottom-0   w-full p-8 pb-0 md:pb-12 md:p-12 md:bottom-0">
             <h3 className="text-4xl mb-7 font-bold">Fortune Fox</h3>
             <h3 className="text-4xl mb-7 font-bold">Now on Solana!</h3>
             <div className="w-full  flex flex-col md:flex-row gap-4">
