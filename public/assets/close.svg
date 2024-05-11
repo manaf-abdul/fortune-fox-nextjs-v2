@@ -1,0 +1,21 @@
+<svg
+                className="close"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <path
+                  d="M8.3335 8.33333L20.0002 20L31.6668 8.33333"
+                  stroke="#F8F7FF"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M8.3335 31.6667L20.0002 20L31.6668 31.6667"
+                  stroke="#F8F7FF"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
