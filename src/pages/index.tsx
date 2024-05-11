@@ -5,6 +5,26 @@ export default function Home() {
   const [bgAnim, setBgAnim] = useState(
     "linear-gradient(126deg,rgb(0, 0, 0),rgb(71, 6, 65),rgb(10, 7, 41))"
   );
+  const [showBtn, setShowBtn] = useState("myBtn none");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      setShowBtn("myBtn");
+    } else {
+      setShowBtn("none");
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 
   useEffect(() => {
     let deg = 0;
@@ -13,6 +33,9 @@ export default function Home() {
       let bgColor = `linear-gradient(${deg}deg,rgb(0, 0, 0),rgb(71, 6, 65),rgb(10, 7, 41))`;
       setBgAnim(bgColor);
     }, 30);
+    window.onscroll = function () {
+      scrollFunction();
+    };
     return () => clearInterval(interval);
   }, []);
 
@@ -119,9 +142,9 @@ export default function Home() {
           <img
             src="assets/17.png"
             alt=""
-            className="picture absolute bottom-0 right-0 md:right-20 lg:right-60 w-72"
+            className="picture absolute bottom-20 right-0 md:bottom-32 lg:bottom-0 md:right-20 lg:right-60 w-72"
           />
-          <div className="absolute bottom-0  w-full p-8 pb-0 md:pb-12 md:p-12">
+          <div className="absolute bottom-20 lg:bottom-0   w-full p-8 pb-0 md:pb-12 md:p-12">
             <h3 className="text-4xl mb-7 font-bold">Fortune Fox</h3>
             <h3 className="text-4xl mb-7 font-bold">Now on Solana!</h3>
             <div className="w-full  flex flex-col md:flex-row gap-4">
@@ -148,7 +171,7 @@ export default function Home() {
         className="h-screen  text-white md:p-12 max-w-[1440px] mx-auto"
         id="about"
       >
-        <div className="h-full flex flex-col justify-between py-20 md:py-0 items-center lg:flex-row ">
+        <div className="h-full flex flex-col md:justify-between gap-16 md:gap-0 py-20 md:py-0 items-center lg:flex-row ">
           <div className="md:px-40 lg:px-0  ">
             <img
               src="assets/7.png"
@@ -330,6 +353,14 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <button
+        onClick={topFunction}
+        id="myBtn"
+        className={showBtn}
+        title="Go to top"
+      >
+        <img src="assets/arrow-up.svg" alt="Go to Top" />
+      </button>
     </div>
   );
 }
