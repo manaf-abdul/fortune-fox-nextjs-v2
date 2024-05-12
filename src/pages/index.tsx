@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BuyFortune from "../component/BuyFortune";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -245,6 +246,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* <BuyFortune /> */}
       <section
         className="pt-12 mt-10 p-8 max-w-[1440px] mx-auto"
         id="tokenomics"
