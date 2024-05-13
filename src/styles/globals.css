@@ -87,3 +87,18 @@ h3 {
 
   scale: 1;
 }
+.modal {
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+.modal-w {
+  max-width: 386px;
+}
+.modalBg {
+  background: linear-gradient(
+    99deg,
+    #7b3ec8 96.04% #3e54c8 47.51%,
+    #2ee6a6 1.93%
+  );
+}
