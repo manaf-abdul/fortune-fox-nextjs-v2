@@ -1,15 +1,15 @@
-import About from "@/component/About";
-import BuyFFox from "@/component/BuyFFox";
-import Footer from "@/component/Footer";
-import FoxGallery from "@/component/FoxGallery";
-import GoToUp from "@/component/GoToUp";
-import HeroSection from "@/component/HeroSection";
-import HowToBuy from "@/component/HowToBuy";
-import MobileMenu from "@/component/MobileMenu";
-import NavBar from "@/component/NavBar";
-import PreSale from "@/component/PreSale";
-import Quote from "@/component/Quote";
-import Tokenomics from "@/component/Tokenomics";
+import About from "@/components/About";
+import BuyFFox from "@/components/BuyFFox";
+import Footer from "@/components/Footer";
+import FoxGallery from "@/components/FoxGallery";
+import GoToUp from "@/components/GoToUp";
+import HeroSection from "@/components/HeroSection";
+import HowToBuy from "@/components/HowToBuy";
+import MobileMenu from "@/components/MobileMenu";
+import NavBar from "@/components/NavBar";
+import PreSale from "@/components/PreSale";
+import Quote from "@/components/Quote";
+import Tokenomics from "@/components/Tokenomics";
 import { useEffect, useState } from "react";
 
 export default function Home() {
