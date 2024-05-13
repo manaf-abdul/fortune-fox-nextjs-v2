@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function Tokenomics() {
+  const [isCopied, setIsCopied] = useState(false);
+  const token = "EUeJuDgVxx83953XeBHS3fzY7tneitb19dmdPrTMHGqd";
+  const onCopyText = () => {
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  };
   return (
     <section className="pt-12 mt-10 p-8 max-w-[1440px] mx-auto" id="tokenomics">
       <div className="text-white xl:px-20">
@@ -35,10 +44,27 @@ export default function Tokenomics() {
         <div className="border-4 border-solid border-white min-w-80 rounded-3xl p-6 flex min-h-32 items-start  flex-col max-h-fit">
           <div className="text-3xl font-semibold">Token Address</div>
           <div className="flex flex-row justify-between w-full items-center ">
-            <p className="copytext break-words text-xl w-[90%]">
-              EUeJuDgVxx83953XeBHS3fzY7tneitb19dmdPrTMHGqd
-            </p>
-            <img src="assets/copy.svg" alt="Copy" className="cursor-pointer" />
+            <p className="copytext break-words text-xl w-[90%]">{token}</p>
+            <CopyToClipboard text={token} onCopy={onCopyText}>
+              <span>
+                {isCopied ? (
+                  <div className="flex items-center">
+                    <p>Copied!</p>
+                    <img
+                      src="assets/check.svg"
+                      alt="check"
+                      className="w-8 h-8"
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src="assets/copy.svg"
+                    alt="Copy"
+                    className="cursor-pointer"
+                  />
+                )}
+              </span>
+            </CopyToClipboard>
           </div>
         </div>
       </div>

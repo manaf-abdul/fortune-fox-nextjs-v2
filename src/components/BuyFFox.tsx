@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { QRCode } from "react-qrcode-logo";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-export default function BuyFFox({ handleModalClose }:any) {
+export default function BuyFFox({ handleModalClose }: any) {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const onCopyText = () => {
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  };
   const token = "CPbYwvAeUEojg5hMVpmeupbkAuJNyc8YtQXzJ3oaAqoC";
   return (
     <div>
@@ -22,16 +31,28 @@ export default function BuyFFox({ handleModalClose }:any) {
               Send SOL to the address below to participate in the presale, you
               can also scan the QR Code.
             </p>
-            <div className="flex flex-row overflow-hidden rounded-lg mt-8 mx-auto max-w-fit">
+            <div className="flex flex-row overflow-hidden rounded-lg mt-8 mx-auto max-w-fit h-10">
               <p className="overflow-x-auto px-1 bg-white text-pink-800 flex items-center w-[85%] md:w-full">
                 {token}
               </p>
               <div className="bg-black w-[15%] md:w-fit p-1">
-                <img
-                  src="assets/copy.svg"
-                  alt="Copy"
-                  className="cursor-pointer"
-                />
+                <CopyToClipboard text={token} onCopy={onCopyText}>
+                  <span>
+                    {isCopied ? (
+                      <img
+                        src="assets/check.svg"
+                        alt="check"
+                        className="w-8 h-8"
+                      />
+                    ) : (
+                      <img
+                        src="assets/copy.svg"
+                        alt="Copy"
+                        className="cursor-pointer"
+                      />
+                    )}
+                  </span>
+                </CopyToClipboard>
               </div>
             </div>
             <div className="bg-white rounded-md w-60 h-60 mx-auto my-8 flex justify-center items-center overflow-hidden">
