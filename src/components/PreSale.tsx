@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PreSale({ handleModalOpen }) {
+export default function PreSale({ handleModalOpen }:any) {
   return (
     <section className="w-full !p-8 md:p-20  flex justify-center items-center">
       <div className="border-4 border-white border-solid rounded-xl mx-auto p-2 md:p-8 text-white">
