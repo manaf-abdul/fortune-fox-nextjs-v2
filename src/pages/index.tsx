@@ -7,6 +7,7 @@ import HeroSection from "@/component/HeroSection";
 import HowToBuy from "@/component/HowToBuy";
 import MobileMenu from "@/component/MobileMenu";
 import NavBar from "@/component/NavBar";
+import PreSale from "@/component/PreSale";
 import Quote from "@/component/Quote";
 import Tokenomics from "@/component/Tokenomics";
 import { useEffect, useState } from "react";
@@ -74,6 +75,7 @@ export default function Home() {
         <NavBar setIsOpen={setIsOpen} />
         <HeroSection handleModalOpen={handleModalOpen} />
       </section>
+      <PreSale handleModalOpen={handleModalOpen} />
       <About />
       <Quote />
       <HowToBuy handleModalOpen={handleModalOpen} />
