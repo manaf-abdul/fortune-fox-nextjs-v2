@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HowToBuy({ handleModalOpen }) {
+export default function HowToBuy({ handleModalOpen }:any) {
   return (
     <section className=" text-white md:p-12 md:pb-0 relative overflow-x-hidden min-h-fit max-w-[1440px] mx-auto">
       <div className="">
