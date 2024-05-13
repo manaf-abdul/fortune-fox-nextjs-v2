@@ -1,7 +1,7 @@
 import React from "react";
 import { QRCode } from "react-qrcode-logo";
 
-export default function BuyFFox({ handleModalClose }) {
+export default function BuyFFox({ handleModalClose }:any) {
   const token = "CPbYwvAeUEojg5hMVpmeupbkAuJNyc8YtQXzJ3oaAqoC";
   return (
     <div>

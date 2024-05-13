@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NavBar({ setIsOpen }) {
+export default function NavBar({ setIsOpen }:any) {
   return (
     <nav className="p-8 flex justify-between items-center md:p-12">
       <a href="#">

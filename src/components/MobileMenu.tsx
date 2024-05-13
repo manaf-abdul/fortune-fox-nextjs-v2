@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MobileMenu({ setIsOpen }) {
+export default function MobileMenu({ setIsOpen }:any) {
   return (
     <div className=" bg-pink-600 w-60 float-right h-full fixed top-0 right-0 z-30">
       {/* for Mobile */}
