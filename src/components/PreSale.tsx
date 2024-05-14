@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-export default function PreSale({ handleModalOpen }: { handleModalOpen: any }) {
+interface PreSaleProps {
+  handleModalOpen: () => void;
+  handleModalOpen: (data: any) => string | undefined;
+}
+
+export default function PreSale({ handleModalOpen }: PreSaleProps) {
   const [time, setTime] = useState({
     days: 89,
     hours: 23,

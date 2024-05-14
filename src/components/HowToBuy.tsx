@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function HowToBuy({
-  handleModalOpen,
-}: {
-  handleModalOpen: any;
-}) {
+interface HowToBuyProps {
+  handleModalOpen: () => void;
+  handleModalOpen: (data: any) => string | undefined;
+}
+
+export default function HowToBuy({ handleModalOpen }: HowToBuyProps) {
   return (
     <section className=" text-white md:p-12 md:pb-0 relative overflow-x-hidden min-h-fit max-w-[1440px] mx-auto">
       <div className="">

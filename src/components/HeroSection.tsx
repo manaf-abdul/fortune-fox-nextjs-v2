@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function HeroSection({
-  handleModalOpen,
-}: {
-  handleModalOpen: any;
-}) {
+interface HeroSectionProps {
+  handleModalOpen: () => void;
+  handleModalOpen: (data: any) => string | undefined;
+}
+
+export default function HeroSection({ handleModalOpen }: HeroSectionProps) {
   return (
     <div className="min-h-max">
       <img

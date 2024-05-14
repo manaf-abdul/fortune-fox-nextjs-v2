@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function NavBar({ setIsOpen }: { setIsOpen: any }) {
+interface NavBarProps {
+  setIsOpen: boolean;
+}
+
+export default function NavBar({ setIsOpen }: NavBarProps) {
   return (
     <nav className="p-8 flex justify-between items-center md:p-12">
       <a href="#">

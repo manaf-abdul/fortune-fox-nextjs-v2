@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { QRCode } from "react-qrcode-logo";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-export default function BuyFFox({
-  handleModalClose,
-}: {
-  handleModalClose: any;
-}) {
+interface BuyFFoxProps {
+  handleModalClose: () => void;
+  handleModalClose: (data: any) => string | undefined;
+}
+
+export default function BuyFFox({ handleModalClose }: BuyFFoxProps) {
   const [isCopied, setIsCopied] = useState(false);
 
   const onCopyText = () => {
