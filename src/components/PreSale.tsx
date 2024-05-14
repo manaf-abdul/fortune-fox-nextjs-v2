@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 interface PreSaleProps {
   handleModalOpen: () => void;
-  handleModalOpen: (data: any) => string | undefined;
+  // handleModalOpen: (data: any) => string | undefined;
 }
 
 export default function PreSale({ handleModalOpen }: PreSaleProps) {

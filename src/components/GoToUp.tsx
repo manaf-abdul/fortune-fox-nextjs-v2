@@ -3,7 +3,7 @@ import React from "react";
 interface GoToUpProps {
   showBtn: string;
   topFunction: () => void;
-  topFunction: (data: any) => string | undefined;
+  // topFunction: (data: any) => string | undefined;
 }
 
 export default function GoToUp({ showBtn, topFunction }: GoToUpProps) {

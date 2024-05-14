@@ -1,9 +1,9 @@
 import React from "react";
 
 interface NavBarProps {
-  setIsOpen: boolean;
+  setIsOpen: any;
   handleModalOpen: () => void;
-  handleModalOpen: (data: any) => string | undefined;
+  // handleModalOpen: (data: any) => string | undefined;
 }
 
 export default function NavBar({ setIsOpen, handleModalOpen }: NavBarProps) {
