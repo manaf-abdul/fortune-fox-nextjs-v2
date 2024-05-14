@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function GoToUp({ showBtn, topFunction }:any) {
+export default function GoToUp({
+  showBtn,
+  topFunction,
+}: {
+  showBtn: any;
+  topFunction: any;
+}) {
   return (
     <button
       onClick={topFunction}
