@@ -2,9 +2,14 @@ import React from "react";
 
 interface MobileMenuProps {
   setIsOpen: boolean;
+  handleModalOpen: () => void;
+  handleModalOpen: (data: any) => string | undefined;
 }
 
-export default function MobileMenu({ setIsOpen }: MobileMenuProps) {
+export default function MobileMenu({
+  setIsOpen,
+  handleModalOpen,
+}: MobileMenuProps) {
   return (
     <div className=" bg-pink-600 w-60 float-right h-full fixed top-0 right-0 z-30">
       {/* for Mobile */}
@@ -46,14 +51,12 @@ export default function MobileMenu({ setIsOpen }: MobileMenuProps) {
           Telegram
         </a>
 
-        <a
-          href="https://jup.ag/swap/SOL-BOJACK_EUeJuDgVxx83953XeBHS3fzY7tneitb19dmdPrTMHGqd"
-          target="_blank"
+        <button
           className="hover:bg-white hover:text-black rounded-2xl px-3 py-2 text-lg border-2 border-solid border-white"
-          onClick={() => setIsOpen(false)}
+          onClick={() => handleModalOpen}
         >
           Buy Fortune Fox
-        </a>
+        </button>
       </div>
     </div>
   );

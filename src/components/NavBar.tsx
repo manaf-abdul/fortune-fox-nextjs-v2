@@ -2,9 +2,11 @@ import React from "react";
 
 interface NavBarProps {
   setIsOpen: boolean;
+  handleModalOpen: () => void;
+  handleModalOpen: (data: any) => string | undefined;
 }
 
-export default function NavBar({ setIsOpen }: NavBarProps) {
+export default function NavBar({ setIsOpen, handleModalOpen }: NavBarProps) {
   return (
     <nav className="p-8 flex justify-between items-center md:p-12">
       <a href="#">
@@ -35,13 +37,12 @@ export default function NavBar({ setIsOpen }: NavBarProps) {
             Telegram
           </a>
 
-          <a
-            href="https://jup.ag/swap/SOL-BOJACK_EUeJuDgVxx83953XeBHS3fzY7tneitb19dmdPrTMHGqd"
-            target="_blank"
+          <button
             className="hover:bg-white hover:text-black rounded-2xl px-3 py-2 text-lg border-2 border-solid border-white"
+            onClick={handleModalOpen}
           >
             Buy Fortune Fox
-          </a>
+          </button>
         </div>
       </div>
     </nav>

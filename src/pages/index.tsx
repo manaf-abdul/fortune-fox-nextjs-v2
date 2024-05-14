@@ -71,8 +71,10 @@ export default function Home() {
       }}
     >
       <section className="h-screen  text-white relative max-w-[1440px] mx-auto">
-        {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
-        <NavBar setIsOpen={setIsOpen} />
+        {isOpen && (
+          <MobileMenu setIsOpen={setIsOpen} handleModalOpen={handleModalOpen} />
+        )}
+        <NavBar setIsOpen={setIsOpen} handleModalOpen={handleModalOpen} />
         <HeroSection handleModalOpen={handleModalOpen} />
       </section>
       <PreSale handleModalOpen={handleModalOpen} />

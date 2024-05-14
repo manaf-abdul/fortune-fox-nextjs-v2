@@ -27,7 +27,7 @@ export default function HeroSection({ handleModalOpen }: HeroSectionProps) {
             </div>
           </button>
           <a
-            href="https://twitter.com/BojackSolana"
+            href="https://x.com/Fortune_Fox_?t=L8UgfQGnerqHvpUZD08VZQ&s=08 "
             target="_blank"
             className="hover:bg-white/80 hover:text-black rounded-3xl p-3 px-6 text-2xl bg-white text-black min-w-full text-center md:min-w-[260px] max-w-fit"
           >
