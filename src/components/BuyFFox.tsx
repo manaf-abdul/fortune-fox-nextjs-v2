@@ -3,8 +3,7 @@ import { QRCode } from "react-qrcode-logo";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 interface BuyFFoxProps {
-  handleModalClose: () => void;
-  handleModalClose: (data: any) => string | undefined;
+  handleModalClose?: () => void;
 }
 
 export default function BuyFFox({ handleModalClose }: BuyFFoxProps) {

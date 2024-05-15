@@ -3,7 +3,7 @@ import Countdown from "./Countdown";
 
 interface PreSaleProps {
   handleModalOpen: () => void;
-  handleModalOpen: (data: any) => string | undefined;
+  // handleModalOpen: (data: any) => string | undefined;
 }
 
 export default function PreSale({ handleModalOpen }: PreSaleProps) {

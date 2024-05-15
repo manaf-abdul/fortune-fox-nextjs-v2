@@ -2,7 +2,7 @@ import React from "react";
 
 interface HowToBuyProps {
   handleModalOpen: () => void;
-  handleModalOpen: (data: any) => string | undefined;
+  // handleModalOpen: (data: any) => string | undefined;
 }
 
 export default function HowToBuy({ handleModalOpen }: HowToBuyProps) {

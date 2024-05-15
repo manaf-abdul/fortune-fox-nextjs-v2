@@ -1,9 +1,9 @@
 import React from "react";
 
 interface MobileMenuProps {
-  setIsOpen: boolean;
-  handleModalOpen: () => void;
-  handleModalOpen: (data: any) => string | undefined;
+  setIsOpen: any;
+  // handleModalOpen: () => void;
+  handleModalOpen: any
 }
 
 export default function MobileMenu({
