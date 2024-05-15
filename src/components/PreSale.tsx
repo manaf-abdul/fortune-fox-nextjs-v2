@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import Countdown from "./Countdown";
 
 interface PreSaleProps {
   handleModalOpen: () => void;
@@ -6,46 +7,15 @@ interface PreSaleProps {
 }
 
 export default function PreSale({ handleModalOpen }: PreSaleProps) {
-  const [time, setTime] = useState({
-    days: 89,
-    hours: 23,
-    minutes: 59,
-    seconds: 59,
-  });
-
-  useEffect(() => {
-    const timerInterval = setInterval(() => {
-      setTime((prevTime) => {
-        let { days, hours, minutes, seconds } = prevTime;
-
-        if (seconds > 0) {
-          seconds--;
-        } else {
-          seconds = 59;
-          if (minutes > 0) {
-            minutes--;
-          } else {
-            minutes = 59;
-            if (hours > 0) {
-              hours--;
-            } else {
-              hours = 23;
-              if (days > 0) {
-                days--;
-              } else {
-                clearInterval(timerInterval);
-              }
-            }
-          }
-        }
-
-        return { days, hours, minutes, seconds };
-      });
-    }, 1000);
-
-    // Clean up function
-    return () => clearInterval(timerInterval);
-  }, []);
+  let offerEndDate = new Date(2024, 7, 12, 23, 59, 59);
+  let currentDate = new Date();
+  let remainingTime = offerEndDate.getTime() - currentDate.getTime();
+  let days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+  let hours = Math.floor(
+    (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
   return (
     <section className="w-full !p-8 md:p-20  flex justify-center items-center">
@@ -72,23 +42,19 @@ export default function PreSale({ handleModalOpen }: PreSaleProps) {
             <h1 className="uppercase text-5xl mb-6 font-bold mt-12">Ends In</h1>
             <div className="flex flex-row justify-around md:justify-center md:gap-12">
               <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24  border-2 border-solid border-white flex flex-col rounded-lg items-center justify-center">
-                <p className="text-2xl md:text-3xl font-bold ">{time.days}</p>
+                <p className="text-2xl md:text-3xl font-bold ">{days}</p>
                 <p className="text-lg md:text-xl font-semibold">Days</p>
               </div>
               <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24  border-2 border-solid border-white flex flex-col rounded-lg items-center justify-center">
-                <p className="text-2xl md:text-3xl font-bold ">{time.hours}</p>
+                <p className="text-2xl md:text-3xl font-bold ">{hours}</p>
                 <p className="text-lg md:text-xl font-semibold">Hours</p>
               </div>
               <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24  border-2 border-solid border-white flex flex-col rounded-lg items-center justify-center">
-                <p className="text-2xl md:text-3xl font-bold ">
-                  {time.minutes}
-                </p>
+                <p className="text-2xl md:text-3xl font-bold ">{minutes}</p>
                 <p className="text-lg md:text-xl font-semibold">Mins</p>
               </div>
               <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24  border-2 border-solid border-white flex flex-col rounded-lg items-center justify-center">
-                <p className="text-2xl md:text-3xl font-bold ">
-                  {time.seconds}
-                </p>
+                <p className="text-2xl md:text-3xl font-bold ">{seconds}</p>
                 <p className="text-lg md:text-xl font-semibold">Secs</p>
               </div>
             </div>
@@ -123,6 +89,9 @@ export default function PreSale({ handleModalOpen }: PreSaleProps) {
           </div>
         </div>
       </div>
+      {/* <div className="">
+        <Countdown />
+      </div> */}
     </section>
   );
 }
