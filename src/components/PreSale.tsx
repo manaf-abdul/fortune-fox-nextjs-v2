@@ -1,5 +1,5 @@
 "use client";
-import Countdown from "./Countdown";
+// import Countdown from "./Countdown";
 
 interface PreSaleProps {
   handleModalOpen: () => void;
