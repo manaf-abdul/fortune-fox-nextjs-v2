@@ -5,6 +5,7 @@ import FoxGallery from "@/components/FoxGallery";
 import GoToUp from "@/components/GoToUp";
 import HeroSection from "@/components/HeroSection";
 import HowToBuy from "@/components/HowToBuy";
+import Journey from "@/components/Journey";
 import MobileMenu from "@/components/MobileMenu";
 import NavBar from "@/components/NavBar";
 import PreSale from "@/components/PreSale";
@@ -79,6 +80,7 @@ export default function Home() {
       </section>
       <PreSale handleModalOpen={handleModalOpen} />
       <About />
+      <Journey />
       <Quote />
       <HowToBuy handleModalOpen={handleModalOpen} />
       {isModalOpen && <BuyFFox handleModalClose={handleModalClose} />}
