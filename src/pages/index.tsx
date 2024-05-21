@@ -73,21 +73,40 @@ export default function Home() {
     >
       <section className="h-screen  text-white relative max-w-[1440px] mx-auto">
         {isOpen && (
-          <MobileMenu setIsOpen={setIsOpen} handleModalOpen={handleModalOpen} />
+          <MobileMenu
+            setIsOpen={setIsOpen}
+            handleModalOpen={handleModalOpen}
+          />
         )}
-        <NavBar setIsOpen={setIsOpen} handleModalOpen={handleModalOpen} />
-        <HeroSection handleModalOpen={handleModalOpen} />
+        <NavBar
+          setIsOpen={setIsOpen}
+          handleModalOpen={handleModalOpen}
+        />
+        <HeroSection
+          handleModalOpen={handleModalOpen}
+        />
       </section>
-      <PreSale handleModalOpen={handleModalOpen} />
+      <PreSale
+        handleModalOpen={handleModalOpen}
+      />
       <About />
       <Journey />
       <Quote />
-      <HowToBuy handleModalOpen={handleModalOpen} />
-      {isModalOpen && <BuyFFox handleModalClose={handleModalClose} />}
+      <HowToBuy
+        handleModalOpen={handleModalOpen}
+      />
+      {isModalOpen &&
+        <BuyFFox
+          handleModalClose={handleModalClose}
+        />
+      }
       <Tokenomics />
       <FoxGallery />
       <Footer />
-      <GoToUp topFunction={topFunction} showBtn={showBtn} />
+      <GoToUp
+        topFunction={topFunction}
+        showBtn={showBtn}
+      />
     </div>
   );
 }

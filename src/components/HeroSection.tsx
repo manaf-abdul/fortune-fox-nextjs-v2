@@ -22,7 +22,7 @@ export default function HeroSection({ handleModalOpen }: HeroSectionProps) {
             onClick={handleModalOpen}
           >
             <div className="flex gap-3 mx-auto">
-              Buy on Jupiter
+              Buy Now
               <img src="assets/explore.svg" alt="" />
             </div>
           </button>

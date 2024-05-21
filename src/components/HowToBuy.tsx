@@ -34,7 +34,7 @@ export default function HowToBuy({ handleModalOpen }: HowToBuyProps) {
                 className="flex flex-row gap-4 hover:bg-white hover:text-black rounded-2xl px-3 py-2 text-lg border-2 border-solid border-white jupitorBuyButton justify-center md:w-52"
                 onClick={handleModalOpen}
               >
-                Buy on Jupiter
+                Buy Now
                 <img src="assets/explore-white.svg" alt="" />
               </button>
             </div>
